@@ -16,9 +16,11 @@ class sendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $clientName;
+    public function __construct($clientName)
     {
         //
+        $this->clientName = $clientName;
     }
 
     /**
@@ -38,6 +40,9 @@ class sendMail extends Mailable
     {
         return new Content(
             view: 'mail.mail',
+            with: [
+                'clientName' => $this->clientName
+            ]
         );
     }
 

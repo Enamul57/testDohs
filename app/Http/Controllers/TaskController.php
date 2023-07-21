@@ -46,7 +46,7 @@ class TaskController extends Controller
         $data->save();
         $index = DB::table('admins')->where('username',$request->client_name)->first();
 
-        Mail::to($index->email)->send(new sendMail());
+        Mail::to($index->email)->send(new sendMail($request->client_name));
         return response()->json($data);
     }
 
