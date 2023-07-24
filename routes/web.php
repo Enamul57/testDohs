@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\sendMail;
-
+use  Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +14,7 @@ use App\Mail\sendMail;
 |
 */
 
-// Route::get('/{any?}', function () {
-//     return view('welcome');
-// });
-Route::get('/mail/sendmail',function (){
-    Mail::to('haquee208@gmail.com')->send(new sendMail());
-});
+
 Route::get('/{vue_capture?}', function () {
     return view('welcome');
   })->where('vue_capture', '[\/\w\.-]*');

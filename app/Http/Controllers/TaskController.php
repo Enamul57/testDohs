@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 use App\Models\Admin;
 use App\Models\TaskModel;
-use Mail;
-use app\Mail\sendMail;
+use App\Mail\sendMail;
+use  Illuminate\Support\Facades\Mail;
 class TaskController extends Controller
 {
     /**
@@ -46,7 +46,7 @@ class TaskController extends Controller
         $data->save();
         $index = DB::table('admins')->where('username',$request->client_name)->first();
 
-        Mail::to($index->email)->send(new sendMail($request->client_name));
+        Mail::to("haquee208@gmail.com")->send(new sendMail($request->client_name));
         return response()->json($data);
     }
 
