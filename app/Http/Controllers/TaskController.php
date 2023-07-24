@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 use App\Models\Admin;
 use App\Models\TaskModel;
+use Mail;
 use App\Mail\sendMail;
-use  Illuminate\Support\Facades\Mail;
 class TaskController extends Controller
 {
     /**
