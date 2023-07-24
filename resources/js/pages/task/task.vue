@@ -46,7 +46,7 @@
             <label for="projectName" class="hkf_text">Deadline</label>
              <input
           type="date"
-          v-model="form.deadline"
+          v-model="forms.deadline"
           class="form-control rounded"
           placeholder="Search by Type"
           aria-label="Search"
@@ -102,19 +102,20 @@ export default {
   },
   methods: {
     addAccountType() {
-      axios
-        .post("/api/task_approve", this.forms, {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        })
-        .then((res) => {
-            console.log(res.data);
-        })
-        .catch((error) => {
-          this.errors = JSON.parse(error.response.data);
-        });
+        console.log(this.forms);
+    //   axios
+    //     .post("/api/task_approve", this.forms, {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Accept: "application/json",
+    //       },
+    //     })
+    //     .then((res) => {
+    //         console.log(res.data);
+    //     })
+    //     .catch((error) => {
+    //       this.errors = JSON.parse(error.response.data);
+    //     });
     },
   },
 };
