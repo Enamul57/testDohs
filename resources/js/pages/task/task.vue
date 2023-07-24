@@ -78,7 +78,7 @@ export default {
             client_name:"",
             title:"",
             description:"",
-            deadlline:"",
+            deadline:"",
         },
       form: {
         username: "",

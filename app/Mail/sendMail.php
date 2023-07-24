@@ -20,7 +20,9 @@ class sendMail extends Mailable
     public function __construct($clientName)
     {
         //
-        $this->clientName = $clientName;
+
+
+$this->clientName = $clientName;
     }
 
     /**
