@@ -103,19 +103,19 @@ export default {
   methods: {
     addAccountType() {
         console.log(this.forms);
-    //   axios
-    //     .post("/api/task_approve", this.forms, {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Accept: "application/json",
-    //       },
-    //     })
-    //     .then((res) => {
-    //         console.log(res.data);
-    //     })
-    //     .catch((error) => {
-    //       this.errors = JSON.parse(error.response.data);
-    //     });
+      axios
+        .post("/api/task_approve", this.forms, {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((error) => {
+          this.errors = JSON.parse(error.response.data);
+        });
     },
   },
 };
