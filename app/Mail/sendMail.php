@@ -16,7 +16,7 @@ class sendMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public $clientName;
+    private $clientName;
     public function __construct($clientName)
     {
         //
@@ -30,6 +30,7 @@ class sendMail extends Mailable
     {
         return new Envelope(
             subject: 'Test Mail',
+            from :"haquee208@gmail.com",
         );
     }
 

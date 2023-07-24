@@ -46,7 +46,7 @@
             <label for="projectName" class="hkf_text">Deadline</label>
              <input
           type="date"
-          v-model="form.deadlline"
+          v-model="form.deadline"
           class="form-control rounded"
           placeholder="Search by Type"
           aria-label="Search"
